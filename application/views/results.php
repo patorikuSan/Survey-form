@@ -87,18 +87,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<h1>Results to Survey Form!</h1>
 	<?php 
 		
-		$session_data = $this->session->userdata('user_data');
+		// $session_data = $this->session->userdata('user_data');
 		$name = $this->session->userdata['name'];
 		$location = $this->session->userdata['location'];
 		$language = $this->session->userdata['language'];
 		$comment =$this->session->userdata['comment'];
-		$hits = $this->session->userdata('hits');
+		$hits = $this->session->userdata['hits'];
 		if($this->session->set_userdata('hits')){ ?>
 			
 		<div class="visits">	
 				<p>Thank you for submitting the form. You have submitted this form 
 				<?= $hits; ?> times now </p>
-			</div>
+		</div>
 			<?php } ?>
 		<div class="form_body">
 			<label for="name">Your Name:
